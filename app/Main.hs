@@ -7,7 +7,7 @@ import Powergrid(FuelType(..), burn)
 
 main :: IO ()
 main = do
-    let fuels_with_plants =
+    let fuelsWithPlants =
             zipWith burner
                 [ Just (Oil, 3)
                 , Just (Coal, 4)
@@ -24,5 +24,5 @@ main = do
 
 
     putStrLn $ "We have a liftoff. Burned so far: \n"
-        ++ (intercalate ", \n" $ map show fuels_with_plants)
-        ++ "\nPowered " ++ show (foldl summer 0 fuels_with_plants) ++ " cities in total"
+        ++ (intercalate ", \n" $ map show fuelsWithPlants)
+        ++ "\nPowered " ++ show (foldl summer 0 fuelsWithPlants) ++ " cities in total"
