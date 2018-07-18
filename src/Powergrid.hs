@@ -12,7 +12,7 @@ data Plant = Plant
         { fuel :: Fuel
         , cities :: Output
         , price :: Price
-        } deriving (Show)
+        } deriving (Show, Eq)
 
 
 createPlant :: Fuel -> Output -> Price -> Plant
